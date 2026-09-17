@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="kn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ನೀನೇ ನನ್ನ ಕಥೆ ❤️ | Kannada Love Story</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, "Noto Sans Kannada", sans-serif;
+    background: #0b080b;
+    color: white;
+}
+
+/* NAVBAR */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff4f81;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+/* HERO */
+.hero {
+    min-height: 100vh;
+    padding: 140px 8% 70px;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(90deg, #090609 15%, transparent 80%),
+        linear-gradient(0deg, #0b080b, transparent 50%),
+        url("love-bg.jpg") center/cover;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.small-title {
+    color: #ff5c8a;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: clamp(45px, 8vw, 85px);
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #ddd;
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+button {
+    border: none;
+    padding: 14px 27px;
+    border-radius: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.play {
+    background: #e91e63;
+    color: white;
+}
+
+.info {
+    background: rgba(255,255,255,.15);
+    color: white;
+}
+
+/* COMMON */
+section {
+    padding: 80px 8%;
+}
+
+.title {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 45px;
+}
+
+/* STORY */
+.story {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+.story p {
+    color: #ccc;
+    font-size: 18px;
+    line-height: 2;
+}
+
+/* CHARACTERS */
+.characters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 25px;
+}
+
+.character {
+    padding: 30px;
+    text-align: center;
+    background: #1b1117;
+    border-radius: 18px;
+}
+
+.character .emoji {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.character h3 {
+    color: #ff7098;
+    margin-bottom: 10px;
+}
+
+/* EPISODES */
+.episodes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(270px,1fr));
+    gap: 25px;
+}
+
+.card {
+    background: #181016;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+}
+
+.episode-image {
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 65px;
+    background: linear-gradient(135deg,#5b1634,#21101a);
+}
+
+.card-content {
+    padding: 22px;
+}
+
+.card h3 {
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #bbb;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.9);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-box {
+    width: 100%;
+    max-width: 800px;
+    background: #181016;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.modal-box h2 {
+    color: #ff7098;
+    margin-bottom: 20px;
+}
+
+.modal-box p {
+    color: #ddd;
+    line-height: 1.9;
+}
+
+.close {
+    float: right;
+    background: #e91e63;
+    color: white;
+    padding: 8px 15px;
+}
+
+/* VIDEO */
+video {
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 12px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 40px;
+    background: #050305;
+    color: #aaa;
+}
+
+/* MOBILE */
+@media(max-width:600px) {
+
+    nav {
+        padding: 15px 5%;
+    }
+
+    nav a {
+        display: none;
+    }
+
+    section {
+        padding: 60px 5%;
+    }
+
+    .hero {
+        padding: 130px 6% 60px;
+        background:
+            linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.9)),
+            url("love-bg.jpg") center/cover;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+    <div class="logo">❤️ ನೀನೇ ನನ್ನ ಕಥೆ</div>
+
+    <div>
+        <a href="#story">ಕಥೆ</a>
+        <a href="#characters">ಪಾತ್ರಗಳು</a>
+        <a href="#episodes">Episodes</a>
+    </div>
+</nav>
+
+
+<!-- HERO -->
+<header class="hero">
+
+    <div class="hero-content">
+
+        <div class="small-title">
+            KANNADA LOVE STORY WEB SERIES
+        </div>
+
+        <h1>ನೀನೇ ನನ್ನ ಕಥೆ ❤️</h1>
+
+        <p>
+            ಕೆಲವರು ನಮ್ಮ ಜೀವನಕ್ಕೆ ಬರುತ್ತಾರೆ...
+            ಕೆಲವೇ ಕ್ಷಣಗಳಲ್ಲಿ ಪರಿಚಯವಾಗುತ್ತಾರೆ...
+            ಆದರೆ ಅವರ ನೆನಪು ಮಾತ್ರ
+            ಜೀವನಪೂರ್ತಿ ಉಳಿಯುತ್ತದೆ.
+        </p>
+
+        <div class="buttons">
+
+            <button class="play"
+                    onclick="openEpisode(1)">
+                ▶ ಈಗಲೇ ನೋಡಿ
+            </button>
+
+            <button class="info"
+                    onclick="scrollToStory()">
+                ℹ ಕಥೆಯ ಬಗ್ಗೆ
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- STORY -->
+<section id="story">
+
+    <h2 class="title">ಕಥೆಯ ಬಗ್ಗೆ</h2>
+
+    <div class="story">
+
+        <p>
+            ಆದಿತ್ಯ ಒಬ್ಬ ಸಾಮಾನ್ಯ ಹುಡುಗ.
+            ತನ್ನ ಕನಸುಗಳ ಹಿಂದೆ ಓಡುತ್ತಿರುವ ಅವನ ಜೀವನದಲ್ಲಿ
+            ಒಂದು ಮಳೆಯ ಸಂಜೆ ನಂದಿನಿ ಬರುತ್ತಾಳೆ.
+        </p>
+
+        <br>
+
+        <p>
+            ಮೊದಲ ಭೇಟಿ ಅಪರಿಚಿತವಾಗಿತ್ತು.
+            ಎರಡನೇ ಭೇಟಿ ಸ್ನೇಹವಾಯಿತು.
+            ಪ್ರತಿದಿನದ ಮಾತುಗಳು ಪ್ರೀತಿಯಾಗಿ ಬದಲಾದಾಗ,
+            ಅವರಿಬ್ಬರಿಗೂ ತಮ್ಮ ಮನಸ್ಸಿನ ಮಾತು
+            ಅರ್ಥವಾಗುತ್ತದೆ.
+        </p>
+
+        <br>
+
+        <p>
+            ಆದರೆ ಪ್ರತಿಯೊಂದು ಪ್ರೀತಿಗೂ ಒಂದು ಪರೀಕ್ಷೆ ಇರುತ್ತದೆ...
+            ಕುಟುಂಬ, ದೂರ ಮತ್ತು ತಪ್ಪು ತಿಳುವಳಿಕೆ
+            ಅವರ ಪ್ರೀತಿಯನ್ನು ಪರೀಕ್ಷಿಸುತ್ತವೆ.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- CHARACTERS -->
+<section id="characters">
+
+    <h2 class="title">ಮುಖ್ಯ ಪಾತ್ರಗಳು</h2>
+
+    <div class="characters">
+
+        <div class="character">
+            <div class="emoji">👨🏻</div>
+            <h3>ಆದಿತ್ಯ</h3>
+            <p>ಕನಸುಗಳಿಗಾಗಿ ಹೋರಾಡುವ ಸರಳ ಹುಡುಗ.</p>
+        </div>
+
+        <div class="character">
+            <div class="emoji">👩🏻</div>
+            <h3>ನಂದಿನಿ</h3>
+            <p>ಕುಟುಂಬ ಮತ್ತು ಪ್ರೀತಿಯ ನಡುವೆ ಸಿಲುಕುವ ಹುಡುಗಿ.</p>
+        </div>
+
+        <div class="character">
+            <div class="emoji">🧑🏻</div>
+            <h3>ರಾಹುಲ್</h3>
+            <p>ಆದಿತ್ಯನ ಆತ್ಮೀಯ ಸ್ನೇಹಿತ ಮತ್ತು ಅವನ ಬೆಂಬಲ.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- EPISODES -->
+<section id="episodes">
+
+    <h2 class="title">Episodes</h2>
+
+    <div class="episodes">
+
+
+        <!-- EPISODE 1 -->
+        <div class="card">
+
+            <div class="episode-image">🌧️</div>
+
+            <div class="card-content">
+
+                <h3>Episode 1 — ಮೊದಲ ಭೇಟಿ</h3>
+
+                <p>
+                    ಒಂದು ಮಳೆಯ ಸಂಜೆ...
+                    ಆದಿತ್ಯ ಮತ್ತು ನಂದಿನಿ
+                    ಮೊದಲ ಬಾರಿಗೆ ಭೇಟಿಯಾಗುತ್ತಾರೆ.
+                </p>
+
+                <button class="play"
+                        onclick="openEpisode(1)">
+                    ▶ Watch
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- EPISODE 2 -->
+        <div class="card">
+
+            <div class="episode-image">☕</div>
+
+            <div class="card-content">
+
+                <h3>Episode 2 — ಸ್ನೇಹ</h3>
+
+                <p>
+                    ಒಂದು ಕಾಫಿಯಿಂದ ಆರಂಭವಾದ ಮಾತುಗಳು
+                    ದಿನದಿಂದ ದಿನಕ್ಕೆ ಹೆಚ್ಚಾಗುತ್ತವೆ.
+                </p>
+
+                <button class="play"
+                        onclick="openEpisode(2)">
+                    ▶ Watch
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- EPISODE 3 -->
+        <div class="card">
+
+            <div class="episode-image">❤️</div>
+
+            <div class="card-content">
+
+                <h3>Episode 3 — ಪ್ರೀತಿ</h3>
+
+                <p>
+                    ಸ್ನೇಹದ ಹಿಂದೆ ಅಡಗಿದ್ದ
+                    ಪ್ರೀತಿ ಇಬ್ಬರಿಗೂ ಅರಿವಾಗುತ್ತದೆ.
+                </p>
+
+                <button class="play"
+                        onclick="openEpisode(3)">
+                    ▶ Watch
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- EPISODE 4 -->
+        <div class="card">
+
+            <div class="episode-image">💔</div>
+
+            <div class="card-content">
+
+                <h3>Episode 4 — ದೂರ</h3>
+
+                <p>
+                    ಒಂದು ತಪ್ಪು ತಿಳುವಳಿಕೆ
+                    ಅವರಿಬ್ಬರನ್ನೂ ದೂರ ಮಾಡುತ್ತದೆ.
+                </p>
+
+                <button class="play"
+                        onclick="openEpisode(4)">
+                    ▶ Watch
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- EPISODE 5 -->
+        <div class="card">
+
+            <div class="episode-image">🌹</div>
+
+            <div class="card-content">
+
+                <h3>Episode 5 — ಮರಳಿ ಬಾ</h3>
+
+                <p>
+                    ನಿಜವಾದ ಪ್ರೀತಿ ಎಂದಿಗೂ
+                    ಸುಲಭವಾಗಿ ಸೋಲುವುದಿಲ್ಲ.
+                </p>
+
+                <button class="play"
+                        onclick="openEpisode(5)">
+                    ▶ Watch
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- EPISODE 6 -->
+        <div class="card">
+
+            <div class="episode-image">💍</div>
+
+            <div class="card-content">
+
+                <h3>Episode 6 — ನಮ್ಮ ಕಥೆ</h3>
+
+                <p>
+                    ಎಲ್ಲಾ ಅಡೆತಡೆಗಳ ನಂತರ
+                    ಅವರ ಪ್ರೀತಿಯ ಅಂತ್ಯ ಹೇಗಾಗುತ್ತದೆ?
+                </p>
+
+                <button class="play"
+                        onclick="openEpisode(6)">
+                    ▶ Watch
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- EPISODE MODAL -->
+<div class="modal" id="episodeModal">
+
+    <div class="modal-box">
+
+        <button class="close" onclick="closeEpisode()">
+            ✕
+        </button>
+
+        <h2 id="episodeTitle"></h2>
+
+        <p id="episodeStory"></p>
+
+        <!-- ನಿಮ್ಮ ವೀಡಿಯೊ ಇಲ್ಲಿ ಹಾಕಬಹುದು -->
+        <video id="episodeVideo"
+               controls
+               style="display:none;">
+        </video>
+
+    </div>
+
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <p>❤️ ನೀನೇ ನನ್ನ ಕಥೆ</p>
+
+    <br>
+
+    <p>
+        © 2026 Kannada Love Story Web Series
+    </p>
+
+</footer>
+
+
+<script>
+
+const episodes = {
+
+    1: {
+        title: "Episode 1 — ಮೊದಲ ಭೇಟಿ ❤️",
+        story:
+        "ಮಳೆಯ ಸಂಜೆ. ಬಸ್ ನಿಲ್ದಾಣದಲ್ಲಿ ನಿಂತಿದ್ದ ಆದಿತ್ಯನ ಛತ್ರಿ ಗಾಳಿಗೆ ಹಾರಿ ಹೋಗುತ್ತದೆ. ಅದನ್ನು ಹಿಡಿದುಕೊಡುವ ಹುಡುಗಿ ನಂದಿನಿ. ಒಂದು ಸಣ್ಣ ಧನ್ಯವಾದದಿಂದ ಆರಂಭವಾದ ಪರಿಚಯ, ಇಬ್ಬರ ಜೀವನದ ದೊಡ್ಡ ಕಥೆಯ ಆರಂಭವಾಗುತ್ತದೆ."
+    },
+
+    2: {
+        title: "Episode 2 — ಸ್ನೇಹ ☕",
+        story:
+        "ಆ ಮೊದಲ ಭೇಟಿಯ ನಂತರ ಇಬ್ಬರೂ ಮತ್ತೆ ಮತ್ತೆ ಭೇಟಿಯಾಗುತ್ತಾರೆ. ಮಾತುಗಳು ಹೆಚ್ಚಾಗುತ್ತವೆ. ಕಾಫಿ, ನಗು ಮತ್ತು ಸಣ್ಣ ಸಣ್ಣ ಜಗಳಗಳ ನಡುವೆ ಅವರ ಸ್ನೇಹ ಗಟ್ಟಿಯಾಗುತ್ತದೆ."
+    },
+
+    3: {
+        title: "Episode 3 — ಪ್ರೀತಿ ❤️",
+        story:
+        "ಒಂದು ದಿನ ನಂದಿನಿ ಕಾಣಿಸದಿದ್ದಾಗ ಆದಿತ್ಯನಿಗೆ ಏನೋ ಕಳೆದುಕೊಂಡಂತೆ ಅನಿಸುತ್ತದೆ. ಆಗ ಅವನಿಗೆ ತನ್ನ ಮನಸ್ಸಿನಲ್ಲಿರುವುದು ಕೇವಲ ಸ್ನೇಹವಲ್ಲ ಎಂಬುದು ಅರಿವಾಗುತ್ತದೆ."
+    },
+
+    4: {
+        title: "Episode 4 — ದೂರ 💔",
+        story:
+        "ಒಂದು ತಪ್ಪು ಸಂದೇಶ ಇಬ್ಬರ ನಡುವೆ ದೊಡ್ಡ ತಪ್ಪು ತಿಳುವಳಿಕೆಗೆ ಕಾರಣವಾಗುತ್ತದೆ. ನಂದಿನಿ ಆದಿತ್ಯನಿಂದ ದೂರವಾಗುತ್ತಾಳೆ. ಆದರೆ ಆದಿತ್ಯ ಅವಳನ್ನು ಕಳೆದುಕೊಳ್ಳಲು ಸಿದ್ಧನಿರುವುದಿಲ್ಲ."
+    },
+
+    5: {
+        title: "Episode 5 — ಮರಳಿ ಬಾ 🌹",
+        story:
+        "ತನ್ನ ತಪ್ಪನ್ನು ಅರ್ಥಮಾಡಿಕೊಂಡ ಆದಿತ್ಯ ನಂದಿನಿಯನ್ನು ಹುಡುಕುತ್ತಾನೆ. ಅವಳ ಮುಂದೆ ತನ್ನ ಮನಸ್ಸಿನ ನಿಜವಾದ ಮಾತನ್ನು ಹೇಳುತ್ತಾನೆ. ಆದರೆ ನಂದಿನಿಯ ಉತ್ತರ ಇನ್ನೂ ಬಾಕಿಯಿದೆ."
+    },
+
+    6: {
+        title: "Episode 6 — ನಮ್ಮ ಕಥೆ 💍",
+        story:
+        "ಬಹಳ ದಿನಗಳ ನಂತರ ಇಬ್ಬರೂ ಮತ್ತೆ ಭೇಟಿಯಾಗುತ್ತಾರೆ. ಹಳೆಯ ನೋವುಗಳು ಮರೆಯಾಗುತ್ತವೆ. ಪ್ರೀತಿಯನ್ನು ಉಳಿಸಿಕೊಳ್ಳಲು ಇಬ್ಬರೂ ತೆಗೆದುಕೊಳ್ಳುವ ನಿರ್ಧಾರವೇ ಅವರ ಕಥೆಯ ಅಂತ್ಯವಲ್ಲ... ಹೊಸ ಆರಂಭ."
+    }
+
+};
+
+
+function openEpisode(number) {
+
+    const episode = episodes[number];
+
+    document.getElementById("episodeTitle")
+        .innerText = episode.title;
+
+    document.getElementById("episodeStory")
+        .innerText = episode.story;
+
+    document.getElementById("episodeModal")
+        .style.display = "flex";
+
+}
+
+
+function closeEpisode() {
+
+    document.getElementById("episodeModal")
+        .style.display = "none";
+
+}
+
+
+function scrollToStory() {
+
+    document.getElementById("story")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+
+}
+
+
+/* Click outside modal */
+window.onclick = function(event) {
+
+    const modal =
+        document.getElementById("episodeModal");
+
+    if (event.target === modal) {
+        closeEpisode();
+    }
+
+};
+
+</script>
+
+</body>
+</html>
